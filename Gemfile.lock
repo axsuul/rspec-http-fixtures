@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec-http-fixtures (0.0.2)
+    rspec-http-fixtures (0.0.3)
       byebug
 
 GEM
