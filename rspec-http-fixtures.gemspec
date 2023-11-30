@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "rspec-http-fixtures"
-  spec.version = "0.0.1"
+  spec.version = "0.0.2"
   spec.authors = ["James Hu"]
 
   spec.summary = "Capistrano plugin for deploying and managing Nomad jobs"
@@ -28,7 +28,6 @@ Gem::Specification.new do |spec|
 
   # Uncomment to register a new dependency of your gem
   spec.add_dependency "byebug"
-  spec.add_dependency "rake"
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html

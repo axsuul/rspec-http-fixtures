@@ -1,15 +1,13 @@
 PATH
   remote: .
   specs:
-    rspec-http-fixtures (0.0.1)
+    rspec-http-fixtures (0.0.2)
       byebug
-      rake
 
 GEM
   remote: https://rubygems.org/
   specs:
     byebug (11.1.3)
-    rake (13.1.0)
 
 PLATFORMS
   arm64-darwin-21
