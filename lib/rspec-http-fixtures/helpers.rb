@@ -46,7 +46,7 @@ module RSpecHTTPFixtures
       erb.result(namespace.instance_eval { binding })
     end
 
-    def build_json_collection_fixture(path, collection_params)
+    def build_json_collection_http_fixture(path, collection_params)
       return unless collection_params
 
       collection_params.map { |p| JSON.parse(read_http_fixture(path, p)) }.to_json

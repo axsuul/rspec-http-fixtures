@@ -66,11 +66,11 @@ module RSpecHTTPFixtures
     end
 
     def build_json_collection_fixture(fixture, params_collection = [])
-      @context.build_json_collection_fixture(build_fixture_path(fixture), params_collection)
+      @context.build_json_collection_http_fixture(build_fixture_path(fixture), params_collection)
     end
 
     def build_xml_collection_fixture(fixture, params_collection = [])
-      params_collection.map { |p| @context.read_fixture(build_fixture_path(fixture), p) }.join("")
+      params_collection.map { |p| @context.read_http_fixture(build_fixture_path(fixture), p) }.join("")
     end
 
     # rubocop:disable Style/MethodMissingSuper
