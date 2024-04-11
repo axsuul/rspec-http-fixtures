@@ -51,10 +51,10 @@ module RSpecHTTPFixtures
       default.is_a?(TrueClass) || default.is_a?(FalseClass) ? default : "null"
     end
 
-    def build_json_iso8601(value, default = nil)
+    def build_json_iso8601(value, default = nil, precision: 0)
       value ||= default
 
-      build_json_null(value) || build_json_string(value.is_a?(String) ? value : value.iso8601)
+      build_json_null(value) || build_json_string(value.is_a?(String) ? value : value.iso8601(precision))
     end
 
     def build_json_epoch(value)
