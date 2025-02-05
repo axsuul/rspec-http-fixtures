@@ -25,6 +25,24 @@ module RSpecHTTPFixtures
       build_json_null(value) || (value.is_a?(String) ? value : value.to_json)
     end
 
+    # Used to build JSON pairs to add to an existing object
+    # @example
+    #   In the JSON fixture file:
+    #
+    #   {
+    #     <%= build_json_pairs("foo" => "1", "bar" => "2") %>
+    #   }
+    #
+    #   results in final output:
+    #
+    #   {
+    #     "foo": "1",
+    #     "bar": "2"
+    #   }
+    def build_json_data_pairs(pairs)
+      build_json_data(pairs)[1..-2]
+    end
+
     # Returns string value enclosed in quotes or null if nil for json fixtures. Can also be forced to be null by
     # passing in the string: "null"
     def build_json_string(value, default = nil)

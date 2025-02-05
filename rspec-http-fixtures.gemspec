@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name = "rspec-http-fixtures"
-  spec.version = "0.0.4"
+  spec.version = "0.0.5"
   spec.authors = ["James Hu"]
 
   spec.summary = "Capistrano plugin for deploying and managing Nomad jobs"

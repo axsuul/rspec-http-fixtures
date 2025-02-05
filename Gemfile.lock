@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec-http-fixtures (0.0.4)
+    rspec-http-fixtures (0.0.5)
       byebug
       rake
 
