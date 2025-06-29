@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec-http-fixtures (0.0.5)
+    rspec-http-fixtures (0.1.0)
       byebug
       rake
 
@@ -13,6 +13,7 @@ GEM
 
 PLATFORMS
   arm64-darwin-21
+  arm64-darwin-23
 
 DEPENDENCIES
   rspec-http-fixtures!

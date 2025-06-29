@@ -48,8 +48,8 @@ module RSpecHTTPFixtures
     def build_json_string(value, default = nil)
       value ||= default
 
-      # Ensure any double quotes are escaped since they are part of string and won't mess up the entire JSON
-      build_json_null(value) || "\"#{value.to_s.gsub('"', '\"')}\""
+      # `dump` ensures everything is escaped (e.g. \ is converted to \\) and will also include escaped quotes around the string
+      build_json_null(value) || value.to_s.dump
     end
 
     # Returns integer value or null if nil for json fixtures. Can also be forced to be null by passing in the
@@ -91,7 +91,6 @@ module RSpecHTTPFixtures
       params_collection.map { |p| @context.read_http_fixture(build_fixture_path(fixture), p) }.join("")
     end
 
-    # rubocop:disable Style/MethodMissingSuper
     # rubocop:disable Style/MissingRespondToMissing
     def method_missing(name, *args)
       instance_variable = "@#{name}"
@@ -104,7 +103,6 @@ module RSpecHTTPFixtures
         send(name, *args)
       end
     end
-    # rubocop:enable Style/MethodMissingSuper
     # rubocop:enable Style/MissingRespondToMissing
   end
 end
